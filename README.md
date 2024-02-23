@@ -9,7 +9,7 @@ To use pygrep, you need to clone the repository to your local machine. Follow th
 1. Clone the pygrep repository from GitHub:
 
 ```bash
-git clone https://github.com/your-username/pygrep.git
+git clone https://github.com/lazyprogrammerP/pygrep.git
 ```
 
 2. Navigate to the pygrep directory:
