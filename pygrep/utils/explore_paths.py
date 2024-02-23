@@ -18,7 +18,10 @@ def explore_paths(paths: list[str], args: PyGrepArguments) -> list[str]:
                         for directory_file_path in directory_file_paths:
                             flattened_paths.append(os.path.join(root, directory_file_path))
                 else:
-                    raise DirectoryWithoutRecursive(path)
+                    for directory_file in os.listdir(path):
+                        directory_file_path = os.path.join(path, directory_file)
+                        if os.path.isfile(directory_file_path):
+                            flattened_paths.append(directory_file_path)
             else:
                 raise NotAFileOrDirectory(path)
 
